@@ -318,7 +318,89 @@ button.btn, input.btn {
 }
 
 /*--------------------------------------------------------------
-	4.0 Footer
+	4.0 Landing
+--------------------------------------------------------------*/
+.layout-landing article {
+  margin: 6em 0 4em 0;
+  @include bp-xsmall {
+    margin: 4em 0 2.5em 0;
+  }
+}
+
+.layout-landing article .col-md-8.col-md-offset-2 {
+  float: none;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.landing-page {
+  text-align: center;
+}
+
+.landing-eyebrow {
+  margin-bottom: 1.5em;
+  color: #7b8b96;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.landing-title {
+  margin: 0 0 0.4em 0;
+  color: #20313d;
+  font-family: 'Open Sans', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  @include bp-xsmall {
+    font-size: 40px;
+  }
+}
+
+.landing-copy {
+  max-width: 32em;
+  margin: 0 auto 2.5em auto;
+  color: #52636f;
+  font-size: 1.15em;
+  @include bp-xsmall {
+    font-size: 1.05em;
+  }
+}
+
+.landing-image-wrap {
+  margin: 0 auto;
+  padding: 1.35em;
+  border: 1px solid #dfe8ee;
+  border-radius: 22px;
+  background: #f7fafc;
+  box-shadow: 0 20px 45px rgba(26, 44, 56, 0.08);
+}
+
+.landing-image {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.landing-actions {
+  margin-top: 1.8em;
+  .btn {
+    margin-bottom: 0;
+    color: #20313d;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .btn i {
+    padding-right: 0.8em;
+    margin-right: 0.05em;
+  }
+}
+
+/*--------------------------------------------------------------
+	5.0 Footer
 --------------------------------------------------------------*/
 .site-footer {
   font-size: 14px;
@@ -344,7 +426,7 @@ button.btn, input.btn {
 }
 
 /*--------------------------------------------------------------
-	5.0 Code formatting
+	6.0 Code formatting
 --------------------------------------------------------------*/
 pre,
 code {
@@ -366,7 +448,7 @@ pre {
     padding-left: 0; }
 
 /*--------------------------------------------------------------
-	6.0 Syntax highlighting styles
+	7.0 Syntax highlighting styles
 --------------------------------------------------------------*/
 .highlight {
   background: #fff; }
