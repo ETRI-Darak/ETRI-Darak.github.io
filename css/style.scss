@@ -321,9 +321,9 @@ button.btn, input.btn {
 	4.0 Landing
 --------------------------------------------------------------*/
 .layout-landing article {
-  margin: 6em 0 4em 0;
+  margin: clamp(3em, 5.5vh, 4.25em) 0 clamp(1.5em, 3vh, 2.25em) 0;
   @include bp-xsmall {
-    margin: 4em 0 2.5em 0;
+    margin: 2.5em 0 1.6em 0;
   }
 }
 
@@ -339,7 +339,7 @@ button.btn, input.btn {
 }
 
 .landing-eyebrow {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.8em;
   color: #7b8b96;
   font-size: 13px;
   font-weight: 700;
@@ -348,31 +348,32 @@ button.btn, input.btn {
 }
 
 .landing-title {
-  margin: 0 0 0.4em 0;
+  margin: 0 0 0.22em 0;
   color: #20313d;
   font-family: 'Open Sans', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-  font-size: 54px;
+  font-size: 50px;
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: 0.08em;
   line-height: 1.08;
   @include bp-xsmall {
-    font-size: 40px;
+    font-size: 37px;
   }
 }
 
 .landing-copy {
-  max-width: 32em;
-  margin: 0 auto 2.5em auto;
+  max-width: 46em;
+  margin: 0 auto clamp(0.9em, 2vh, 1.4em) auto;
   color: #52636f;
-  font-size: 1.15em;
+  font-size: 1.06em;
+  line-height: 1.6;
   @include bp-xsmall {
-    font-size: 1.05em;
+    font-size: 0.98em;
   }
 }
 
 .landing-image-wrap {
   margin: 0 auto;
-  padding: 1.35em;
+  padding: clamp(0.55em, 1vw, 0.85em);
   border: 1px solid #dfe8ee;
   border-radius: 22px;
   background: #f7fafc;
@@ -383,11 +384,13 @@ button.btn, input.btn {
 .landing-image {
   display: block;
   width: 100%;
+  max-height: min(46vh, 560px);
+  object-fit: contain;
   border-radius: 12px;
 }
 
 .landing-actions {
-  margin-top: 1.8em;
+  margin-top: clamp(0.7em, 1.4vh, 1em);
   .btn {
     margin-bottom: 0;
     color: #20313d;
@@ -400,12 +403,60 @@ button.btn, input.btn {
   }
 }
 
+@media (min-width: 1024px) {
+  .landing-copy {
+    white-space: nowrap;
+  }
+}
+
+@media (max-height: 900px) {
+  .landing-title {
+    font-size: 44px;
+  }
+
+  .landing-copy {
+    margin-bottom: 0.95em;
+    font-size: 1em;
+  }
+
+  .landing-image {
+    max-height: min(41vh, 480px);
+  }
+}
+
+@media (max-height: 760px) {
+  .layout-landing article {
+    margin-top: 2em;
+  }
+
+  .landing-eyebrow {
+    margin-bottom: 0.65em;
+  }
+
+  .landing-title {
+    font-size: 35px;
+  }
+
+  .landing-copy {
+    margin-bottom: 0.8em;
+    font-size: 0.92em;
+  }
+
+  .landing-image {
+    max-height: min(37vh, 360px);
+  }
+
+  .landing-actions {
+    margin-top: 0.7em;
+  }
+}
+
 /*--------------------------------------------------------------
 	5.0 Footer
 --------------------------------------------------------------*/
 .site-footer {
   font-size: 14px;
-  margin-top: 2em;
+  margin-top: 1.25em;
   border-top: 1px solid #efefef;
   padding: 1em 0;
   p {
